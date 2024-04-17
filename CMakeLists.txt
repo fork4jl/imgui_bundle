@@ -150,6 +150,7 @@ if(DEFINED ENV{IMMVISION_FETCH_OPENCV})
     set(IMMVISION_FETCH_OPENCV "$ENV{IMMVISION_FETCH_OPENCV}")
 endif()
 option(IMGUI_BUNDLE_FAIL_IF_IMMVISION_UNAVAILABLE "Fail if immvision unavailable (OpenCV not found)" OFF)
+set(IMMVISION_FETCH_OPENCV OFF)
 
 
 # IMGUI_BUNDLE_WITH_TEST_ENGINE: include support for imgui_test_engine
@@ -430,9 +431,10 @@ endif()
 # First, adjust variables so that they show correctly
 #
 # IMGUI_BUNDLE_WITH_IMMVISION may be defined in external/immvision/CMakeLists.txt
-if (NOT IMGUI_BUNDLE_WITH_IMMVISION)
-    set(IMGUI_BUNDLE_WITH_IMMVISION OFF)
-endif()
+# if (NOT IMGUI_BUNDLE_WITH_IMMVISION)
+#     set(IMGUI_BUNDLE_WITH_IMMVISION OFF)
+# endif()
+set(IMGUI_BUNDLE_WITH_IMMVISION OFF)
 him_log_configuration()
 message(STATUS "
     Dear ImGui Bundle build options:

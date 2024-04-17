@@ -133,3 +133,4 @@ skip = ["*win32"]
 # Environment variables
 # IMGUIBUNDLE_OPENCV_FETCH_SOURCE => Download a precompiled version of opencv4.6.0
 # environment = { IMGUIBUNDLE_OPENCV_WIN_USE_OFFICIAL_PREBUILT_460="ON" }
+environment = { IMGUI_BUNDLE_WITH_IMMVISION="OFF", IMMVISION_FETCH_OPENCV="OFF" }
